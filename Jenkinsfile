@@ -1,12 +1,12 @@
 pipeline{
     agent    any    
     tools  {
-        maven "my-maven-3"
+        maven "LocalMaven"
     }
     environment {
         NEXUS_VERSION = "nexus3"
         NEXUS_PROTOCOL = "http"
-        NEXUS_URL = "host.docker.internal:8081"
+        NEXUS_URL = "192.168.0.105:8081"
         NEXUS_REPOSITORY_SNAPSHOT = "mylocalrepo-snapshots"
         NEXUS_REPOSITORY_RELEASE = "mylocalrepo-releases"
         NEXUS_CREDENTIAL_ID = "nexus-user-credentials"    
